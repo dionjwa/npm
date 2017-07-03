@@ -32,7 +32,7 @@ extern class ModelInstance<T : ModelInstance<T>> {
   @:overload(function(values : {}, ?options : ModelInstanceSetOptions) : Dynamic {})
   function set(key : String, value : Dynamic, ?options : ModelInstanceSetOptions) : Dynamic;
 
-  function changed(?key : String) : Bool;
+  function changed(?key : String, ?force :Bool) : Bool;
 
   function previous(?key : String) : Dynamic;
 
