@@ -43,6 +43,8 @@ extern class Sequelize {
   static function ENUM(value : haxe.extern.Rest<String>) : DataType;
   static function ARRAY(type : DataType) : DataType;
 
+  var options (default, null):Dynamic;
+
   @:overload(function(connectionstring : String) : Void {})
   @:overload(function(connectionstring : String, options : DatabaseOptions) : Void {})
   function new(database : String, username : String, password : String, ?options : DatabaseOptions) : Void;

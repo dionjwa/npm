@@ -1,11 +1,17 @@
 package npm.sequelize.model;
 
 import npm.sequelize.modelinstance.ModelInstance;
+import npm.Sequelize;
 
 import haxe.extern.EitherType;
 import js.Promise;
 
 extern class Model<T : ModelInstance<T>> {
+  var sequelize :Sequelize;
+  var tableName :String;
+
+  function getTableName() :String;
+
   // Update database by creating table for this model
   function sync(?opts :ModelSyncOptions) : Promise<Model<T>>;
 
